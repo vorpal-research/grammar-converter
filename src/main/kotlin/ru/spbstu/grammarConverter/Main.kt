@@ -1,12 +1,13 @@
-package ru.spbstu
+package ru.spbstu.grammarConverter
 
 import com.xenomachina.argparser.ArgParser
 import com.xenomachina.argparser.default
-import org.antlr.parser.antlr4.ANTLRv4Lexer
-import org.antlr.parser.antlr4.ANTLRv4Parser
-import org.antlr.parser.antlr4.ANTLRv4ParserBaseVisitor
+import com.xenomachina.argparser.mainBody
 import org.antlr.v4.runtime.CharStreams
 import org.antlr.v4.runtime.CommonTokenStream
+import ru.spbstu.grammarConverter.antlr4.ANTLRv4Lexer
+import ru.spbstu.grammarConverter.antlr4.ANTLRv4Parser
+import ru.spbstu.grammarConverter.antlr4.ANTLRv4ParserBaseVisitor
 import java.io.File
 import java.io.InputStream
 
@@ -184,12 +185,12 @@ fun parseRules(ins: InputStream): List<Rule> {
 
 class Args(parser: ArgParser) {
     val inputFile
-            by parser.positional(help = ".g4 file", transform = {
+            by parser.positional(help = ".g4 file") {
                 when(this) {
                     "-" -> System.`in`
                     else -> File(this).inputStream()
                 }
-            }).default(System.`in`)
+            }.default(System.`in`)
     val markdown
             by parser.flagging("-m", "--markdown", help = "Output markdown").default(true)
     val divs
@@ -197,15 +198,15 @@ class Args(parser: ArgParser) {
     val ebnf
             by parser.flagging("-e", "--ebnf", help = "Output ebnf").default(false)
     val outputFile
-            by parser.storing("-o", "--output", help = "Destination file", transform = {
+            by parser.storing("-o", "--output", help = "Destination file") {
                 when(this) {
                     "-" -> System.`out`
                     else -> File(this).outputStream()
                 }
-            }).default(System.`out`)
+            }.default(System.`out`)
 }
 
-fun main(args: Array<String>) {
+fun main(args: Array<String>) = mainBody {
     val arguments = ArgParser(args).parseInto(::Args)
 
     val rules = parseRules(arguments.inputFile)

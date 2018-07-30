@@ -69,7 +69,7 @@
                     </descriptorRefs>
                     <archive>
                         <manifest>
-                            <mainClass>ru.spbstu.MainKt</mainClass>
+                            <mainClass>ru.spbstu.grammarConverter.MainKt</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -104,9 +104,9 @@
                     </includes>
                     <arguments>
                         <argument>-package</argument>
-                        <argument>org.antlr.parser.antlr4</argument>
+                        <argument>ru.spbstu.grammarConverter.antlr4</argument>
                     </arguments>
-                    <outputDirectory>${project.build.directory}/generated-sources/antlr4/org/antlr/parser/antlr4</outputDirectory>
+                    <outputDirectory>${project.build.directory}/generated-sources/antlr4/ru/spbstu/grammarConverter/antlr4</outputDirectory>
                     <visitor>true</visitor>
                     <listener>true</listener>
                 </configuration>
@@ -133,6 +133,7 @@
                             <sourceDirs>
                                 <sourceDir>src/main/java</sourceDir>
                                 <sourceDir>src/main/kotlin</sourceDir>
+                                <sourceDir>${project.build.directory}/generated-sources/antlr4</sourceDir>
                             </sourceDirs>
                         </configuration>
                     </execution>
