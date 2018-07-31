@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.spbstu</groupId>
     <artifactId>grammar-converter</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>0.0.0.1-SNAPSHOT</version>
     <name>g4 grammar to markdown</name>
 
     <properties>
