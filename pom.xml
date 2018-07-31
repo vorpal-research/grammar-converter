@@ -1,10 +1,16 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.spbstu</groupId>
     <artifactId>g4toEBNF</artifactId>
-    <version>0.0.0.1-SNAPSHOT</version>
+    <version>0.0.0.2-SNAPSHOT</version>
     <name>g4 grammar to markdown</name>
+
+    <scm>
+        <connection>scm:git:git@github.com:belyaev-mikhail/grammar-converter.git</connection>
+        <developerConnection>scm:git:git@github.com:belyaev-mikhail/grammar-converter.git</developerConnection>
+        <url>https://github.com/belyaev-mikhail/grammar-converter</url>
+      <tag>HEAD</tag>
+  </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
