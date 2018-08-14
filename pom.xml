@@ -2,7 +2,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.spbstu</groupId>
     <artifactId>g4toEBNF</artifactId>
-    <version>0.0.0.2-SNAPSHOT</version>
+    <version>0.0.0.3-SNAPSHOT</version>
     <name>g4 grammar to markdown</name>
 
     <scm>
@@ -10,7 +10,7 @@
         <developerConnection>scm:git:git@github.com:belyaev-mikhail/grammar-converter.git</developerConnection>
         <url>https://github.com/belyaev-mikhail/grammar-converter</url>
       <tag>HEAD</tag>
-  </scm>
+    </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>

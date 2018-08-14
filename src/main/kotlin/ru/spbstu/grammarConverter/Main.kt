@@ -82,7 +82,7 @@ const val MD_LB = "  \n"
 
 private fun GElement.toMarkdown(topLevel: Boolean = false): String = when(this) {
     is Atom -> "`'${name}'`"
-    is RuleRef -> "_${name}_"
+    is RuleRef -> "_[${name}](#grammar-rule-${name})_"
     is Optional -> "[${element.toMarkdown()}]"
     is Plus -> "${element.toMarkdown()} {${element.toMarkdown()}}"
     is Star -> "{${element.toMarkdown()}}"
