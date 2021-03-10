@@ -2,21 +2,21 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>ru.spbstu</groupId>
     <artifactId>g4toEBNF</artifactId>
-    <version>0.0.0.4-SNAPSHOT</version>
+    <version>0.0.0.5-SNAPSHOT</version>
     <name>g4 grammar to markdown</name>
 
     <scm>
         <connection>scm:git:git@github.com:belyaev-mikhail/grammar-converter.git</connection>
         <developerConnection>scm:git:git@github.com:belyaev-mikhail/grammar-converter.git</developerConnection>
         <url>https://github.com/belyaev-mikhail/grammar-converter</url>
-      <tag>HEAD</tag>
+        <tag>HEAD</tag>
     </scm>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <antlr4.visitor>true</antlr4.visitor>
         <antlr4.listener>true</antlr4.listener>
-        <kotlin.version>1.3.61</kotlin.version>
+        <kotlin.version>1.4.31</kotlin.version>
         <antlr4.version>4.8</antlr4.version>
     </properties>
 
@@ -200,9 +200,9 @@
 
     <distributionManagement>
         <repository>
-            <id>bintray-vorpal-research-kotlin-maven</id>
+            <id>github-vorpal-research-kotlin-maven</id>
             <name>vorpal-research-kotlin-maven</name>
-            <url>https://api.bintray.com/maven/vorpal-research/kotlin-maven/${artifactId}/;publish=1</url>
+            <url>https://maven.pkg.github.com/vorpal-research/kotlin-maven</url>
         </repository>
     </distributionManagement>
 
